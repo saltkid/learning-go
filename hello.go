@@ -47,7 +47,7 @@ func main() {
 
 
 	slice_manipulation()
-
+	maps()
 }
 
 // function declaration
@@ -83,4 +83,27 @@ func slice_manipulation() {
 	fmt.Println("original:", dynamic_slice, "\ncopy + new elements:", copy_slice)
 
 	fmt.Println(cap(dynamic_slice), cap(copy_slice))
+}
+
+func maps() {
+	my_map := make(map[string]string)
+
+	// assigning values
+	my_map["aqua"] = "cute"
+	my_map["shion"] = "cute"
+	my_map["ojou"] = "cute"
+	my_map["me"] = "cute"
+
+	// sadge
+	delete(my_map, "me")
+
+	fmt.Println("aqua is", my_map["aqua"])
+	fmt.Println("shion is", my_map["shion"])
+	fmt.Println("ojou is", my_map["ojou"])
+
+	value, exists := my_map["me"]
+	fmt.Println("do i exist?", exists)
+	if exists != false {
+		fmt.Println("yes i do:", value)
+	}
 }

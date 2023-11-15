@@ -7,7 +7,7 @@ just doing the basics yo
 - [x] loops
 - [x] functions
 - [x] slices
-- [ ] maps
+- [x] maps
 - [ ] pointers
 - [ ] errors
 - [ ] interfaces
