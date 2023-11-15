@@ -24,8 +24,8 @@ func main() {
 	fmt.Println("My oshi's name is", name, "and she is", fake_age, "years old")
 	fmt.Printf("She is %v\n", trait)
 
-	age := get_age()
 	// function calls
+	age := get_age()
 	validate_age(age)
 
 	// switch statement
@@ -43,6 +43,11 @@ func main() {
 	for i := 1; i < 5; i++ {
 		fmt.Print(i, ". AKUAAAAAAAAAA\n")
 	}
+
+
+
+	slice_manipulation()
+
 }
 
 // function declaration
@@ -60,4 +65,22 @@ func validate_age(age int) {
 // return type declaration
 func get_age() (age int) {
 	return 15 + 4
+}
+
+func slice_manipulation() {
+	dynamic_slice := []int{1,2,3}
+
+	// assigning values
+	dynamic_slice[0] = 4
+	dynamic_slice[1] = 5
+	dynamic_slice[2] = 6
+	fmt.Println(dynamic_slice)
+
+	// declare slice first before copying
+	copy_slice := make([]int, 3)
+	copy(copy_slice, dynamic_slice)
+	copy_slice = append(dynamic_slice, 7, 8, 9)
+	fmt.Println("original:", dynamic_slice, "\ncopy + new elements:", copy_slice)
+
+	fmt.Println(cap(dynamic_slice), cap(copy_slice))
 }

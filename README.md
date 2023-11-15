@@ -6,7 +6,7 @@ just doing the basics yo
 - [x] structs
 - [x] loops
 - [x] functions
-- [ ] slices
+- [x] slices
 - [ ] maps
 - [ ] pointers
 - [ ] errors
