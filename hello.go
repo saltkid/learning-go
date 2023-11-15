@@ -10,6 +10,11 @@ const (
 	friend = "Shion"
 	lover  = "Okayu"
 )
+// structs
+type Hololive struct {
+	name string
+	trait string
+}
 
 func main() {
 	fmt.Println("hello go")
@@ -44,10 +49,11 @@ func main() {
 		fmt.Print(i, ". AKUAAAAAAAAAA\n")
 	}
 
-
-
 	slice_manipulation()
 	maps()
+
+	aqua := Hololive{"aqua", "cute"}
+	fmt.Println(aqua.name, "is", aqua.trait)
 }
 
 // function declaration
