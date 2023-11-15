@@ -3,7 +3,7 @@ just doing the basics yo
 
 ## To-do
 - [x] variable declaration
-- [x] structs
+- [ ] structs
 - [x] loops
 - [x] functions
 - [x] slices
