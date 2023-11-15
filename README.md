@@ -10,8 +10,8 @@ just doing the basics yo
 - [x] maps
 - [x] methods
 - [ ] pointers
-- [ ] errors
-- [ ] interfaces
+- [x] errors
+- [x] interfaces
 - [ ] concurrency
 - [ ] generics
 - [ ] mutexes

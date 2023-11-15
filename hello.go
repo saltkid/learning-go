@@ -68,7 +68,41 @@ func (h Hololive) age_on_next_birthday() int {
 	next_age := current_year - bday_year
 	return next_age
 }
+type Fan struct {
+	name string
+	trait string
+	birthday string
+}
+func (f Fan) age() int {
+	birthday_datetime, err := time.Parse("2006-01-02", f.birthday)
+	if err != nil {
+		panic(err)
+	}
 
+	bday_year := birthday_datetime.Year()
+	bday_month := birthday_datetime.Month()
+	bday_day := birthday_datetime.Day()
+
+	current_year := time.Now().Year()
+	current_month := time.Now().Month()
+	current_day := time.Now().Day()
+
+	birthday_occured := (current_month > bday_month) || (current_month == bday_month && current_day >= bday_day)
+
+	age := int(current_year - bday_year)
+	if birthday_occured == false {
+		age -= 1
+	}
+	return age
+}
+
+type Person interface {
+	age() int
+}
+
+func years_till_30(p Person) int {
+	return 30 - p.age()
+}
 
 func main() {
 	fmt.Println("hello go")
@@ -109,6 +143,16 @@ func main() {
 	aqua := Hololive{"aqua", "cute", "2004-12-01"}
 	fmt.Println("______________________\n", aqua.name, "is", aqua.trait, "and is", aqua.age(), "years old")
 	fmt.Println(aqua.name, "will be", aqua.age_on_next_birthday(), "on her next birthday on", aqua.next_birthday())
+
+	me := Fan{"my name", "my trait", "2003-12-01"} // all fake if you didn't notice
+	people := []Person {
+		aqua,
+		me,
+	}
+
+	for i,person := range people {
+		fmt.Print(i+1, ". you have ", years_till_30(person), " years till you're 30 ", person, "\n")
+	}
 }
 
 // function declaration
