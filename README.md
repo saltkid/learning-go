@@ -8,6 +8,7 @@ just doing the basics yo
 - [x] functions
 - [x] slices
 - [x] maps
+- [x] methods
 - [ ] pointers
 - [ ] errors
 - [ ] interfaces
