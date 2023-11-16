@@ -155,6 +155,7 @@ func main() {
 	}
 
 	entry()
+	ReadWriteFile()
 }
 
 // function declaration
