@@ -153,6 +153,8 @@ func main() {
 	for i,person := range people {
 		fmt.Print(i+1, ". you have ", years_till_30(person), " years till you're 30 ", person, "\n")
 	}
+
+	entry()
 }
 
 // function declaration

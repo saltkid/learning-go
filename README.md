@@ -12,6 +12,7 @@ just doing the basics yo
 - [ ] pointers
 - [x] errors
 - [x] interfaces
-- [ ] concurrency
+- [x] concurrency (kinda, still need to have a practical example)
+- [ ] file handling
 - [ ] generics
 - [ ] mutexes
